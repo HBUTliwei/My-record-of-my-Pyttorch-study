@@ -1,0 +1,12 @@
+from matplotlib import pyplot as plt
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='TRUE'
+
+panda=np.array(Image.open('panda.jpg').resize((224,224)))
+panda_tensor=torch.from_numpy(panda)
+print(panda_tensor.size())
+plt.imshow(panda)
+plt.show()
+
+#plt.imshow(panda_tensor[:,:,0].numpy())
+#plt.show()
